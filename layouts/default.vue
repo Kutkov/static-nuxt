@@ -1,6 +1,19 @@
 <template>
   <div class="boxed-layout">
+      <div id="wrap">
 
+      
+    <!--Start PreLoader-->
+   <div id="preloader">
+		<div id="status">&nbsp;</div>
+		<div class="loader">
+			<h1>Загрузка...</h1>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!--End PreLoader--> 
     <!--Start Top Bar-->
     <div class="top-bar">
         <div class="container">
@@ -203,6 +216,7 @@
     
 
     <nuxt/>
+    </div>
   </div>
 </template>
 
@@ -211,6 +225,8 @@
 // import mmenu from 'jquery.mmenu'
 export default {
   mounted: function() {
+
+
     // mobile menu
     $("#menu").mmenu({
         "classes": "mm-slide",
@@ -229,7 +245,39 @@ export default {
       },
 
     })
-    // end mobile menu
+    // end mobile menud
+
+    // <!-- Sticky Header -->
+
+    // <!-- Header One -->
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){  
+            $('header').addClass("sticky");
+        }
+        else{
+            $('header').removeClass("sticky");
+        }
+    });
+
+
+    // <!-- Header Two -->
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){  
+            $('.header2').addClass("sticky");
+        }
+        else{
+            $('.header2').removeClass("sticky");
+        }
+    });
+
+     //PreLoader
+    $(window).load(function() { 
+        $('#status').fadeOut(); 
+        $('#preloader').delay(350).fadeOut('slow');
+        // $('body').delay(350).css({'overflow':'visible'});
+    })
+
+
   }
 }
 </script>

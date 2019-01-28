@@ -41,12 +41,15 @@ module.exports = {
         src: "/js-static/tabs.js"
       },
       {
+        src: "/js-static/owl.carousel.js"
+      },
+      {
         src: "/js-static/jquery.mmenu.min.all.js"
       },
       // {
       //   src: "/js-static/custom.js"
       // },
-      
+
     ]
   },
   css: [
@@ -64,7 +67,7 @@ module.exports = {
     // '~assets/css/owl.carousel.css',
     '~assets/css/jquery.mmenu.all.css',
     '~assets/css/demo.css',
-    // '~assets/css/loader.css',
+    '~assets/css/loader.css',
   ],
   /*
   ** Customize the progress bar color
@@ -78,16 +81,16 @@ module.exports = {
     ** Run ESLint on save
     */
     // vendor: ['~assets/js/tabs.js', '~assets/js/easy-responsive-tabs.js'],
-  //  vendor: ["jquery"],
-  //   plugins: [
-  //     new webpack.ProvidePlugin({
-  //       $: "jquery",
-  //       jQuery: 'jquery',
-  //       'window.jQuery': 'jquery'
-  //     })
-  //   ],
+    //  vendor: ["jquery"],
+    //   plugins: [
+    //     new webpack.ProvidePlugin({
+    //       $: "jquery",
+    //       jQuery: 'jquery',
+    //       'window.jQuery': 'jquery'
+    //     })
+    //   ],
 
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',

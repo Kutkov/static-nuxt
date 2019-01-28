@@ -313,7 +313,20 @@
      </div>
    </div>
    <!--End Welcome-->
+        <!--Start Doctor Quote-->
+     <div class="dr-quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="quote">"Чудо переходящих одно в другое состояний - это чудо превращения вялой гусеницы в нежно - прекрасную бабочку!"</span>
+                    <!-- <span class="name">- Dr. Jonathan Gobi</span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Doctor Quote-->
   </div>
+  <a href="#0" class="cd-top"></a>
   </div>
 </template>
 
@@ -325,6 +338,7 @@ export default {
     AppLogo
   },
   mounted: function() {
+
     /* jQuery activation and setting options for the tabs*/
     var tabbedNav = $("#tabbed-nav").zozoTabs({
       orientation: "horizontal",
@@ -398,6 +412,37 @@ export default {
     }	
 
     var accordion = new Accordion($('#accordion'), false);
+
+    // <!-- Back to Top -->
+    jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    offset_opacity = 1200,
+    //duration of the top scrolling animation (in ms)
+    scroll_top_duration = 1400,
+    //grab the "back to top" link
+    $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+    ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+    if( $(this).scrollTop() > offset_opacity ) { 
+    $back_to_top.addClass('cd-fade-out');
+    }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+        event.preventDefault();
+        $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+        );
+    });
+    });
+    // end back to top
+
   }
 }
 </script>
