@@ -25,7 +25,7 @@
               <div class="get-touch">
                 <ul>
                   <li><a href="tel:+7 (812) 645-90-01"><i class="icon-phone4"></i> +7 (812) 645-90-01</a></li>
-                  <li><a href="#."><i class="icon-mail"></i> vitalclinic.ru@gmail.com</a></li>
+                  <li><a href="mailto:vitalclinic.ru@gmail.com"><i class="icon-mail"></i> vitalclinic.ru@gmail.com</a></li>
                 </ul>
               </div>	
             </div>    
@@ -216,6 +216,7 @@
     
 
     <nuxt/>
+    <Footer></Footer>
     </div>
   </div>
 </template>
@@ -223,7 +224,11 @@
 <script>
 // import $ from 'jquery's
 // import mmenu from 'jquery.mmenu'
+import Footer from '~/components/Footer.vue'
 export default {
+    components: {
+        Footer
+    },
   mounted: function() {
 
 

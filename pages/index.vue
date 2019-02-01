@@ -331,12 +331,10 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+
 
 export default {
-  components: {
-    AppLogo
-  },
+  
   mounted: function() {
 
     /* jQuery activation and setting options for the tabs*/
