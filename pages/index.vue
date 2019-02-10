@@ -33,69 +33,7 @@
     </div></div>
     
     <!--End Banner-->
- <!--Start Make Appointment-->
-   <div class="make-appointment">
-   <div class="container">
-   
-    <ul id="accordion" class="accordion">
-  <li>
-    
-    <div class="link"><i class="fa fa-database"></i><span class="appointment-title">Оставить заявку</span> <i class="icon-chevron-down"></i> </div>
-    
-    <section class="bgcolor-3">
-    <p class="error" id="error" style="display:none;"></p>
-    <p class="success" id="success" style="display:none;"></p>
-    
-    <form name="appointment_form" id="appointment_form" method="post" action="#" onSubmit="return false">
-    
-				<span class="input input--kohana">
-					<input class="input__field input__field--kohana" type="text" id="input-29" name="input-29" />
-					<label class="input__label input__label--kohana" for="input-29">
-                        <i class="icon-user6 icon icon--kohana"></i>
-						<span class="input__label-content input__label-content--kohana">Ваше имя*</span>
-					</label>
-				</span>
-				<span class="input input--kohana">
-					<input class="input__field input__field--kohana" type="text" id="input-30" name="input-30" />
-					<label class="input__label input__label--kohana" for="input-30">
-						<i class="icon-dollar icon icon--kohana"></i>
-						<span class="input__label-content input__label-content--kohana">Email</span>
-					</label>
-				</span>
-				<span class="input input--kohana last">
-					<input class="input__field input__field--kohana" type="text" id="input-31" name="input-31" />
-					<label class="input__label input__label--kohana" for="input-31">
-						<i class="icon-phone5 icon icon--kohana"></i>
-						<span class="input__label-content input__label-content--kohana">Номер телефона*</span>
-					</label>
-				</span>
-                
-                <span class="input input--kohana">
-					<input class="input__field input__field--kohana" type="text" id="datepicker"  placeholder="Желаемая дата визита" onClick="" name="datepicker" />	
-				</span>
-                
-                <span class="input input--kohana message">
-                	<input class="input__field input__field--kohana" type="text" id="textarea" name="textarea" >
-					<label class="input__label input__label--kohana" for="textarea">
-						<i class="icon-new-message icon icon--kohana"></i>
-						<span class="input__label-content input__label-content--kohana">Комментарий</span>
-                    </label>
-                </span>
-                
-                <input name="submit" type="submit" value="Отправить" onClick="validateAppointment();">
-                      </form>  
-
-                
-			</section>
-            
-            
-    
-      </li>
-    
-      </ul>
-      </div>
-    </div>
-   <!--End Make Appointment-->  
+   <accordionCall></accordionCall>
    <!--Start Content-->
    <div class="content">
    
@@ -170,6 +108,7 @@
             </div>
         </div>
    <!--End Services-->
+   
    <!--Start Welcome-->
     <div class="welcome dark-back">
      <div class="container">
@@ -326,15 +265,17 @@
     </div>
     <!--End Doctor Quote-->
   </div>
-  <a href="#0" class="cd-top"></a>
+  
   </div>
 </template>
 
 <script>
-
+import accordionCall from '~/components/back_call/AccordionCall.vue'
 
 export default {
-  
+    components: {
+        accordionCall
+    },
   mounted: function() {
 
     /* jQuery activation and setting options for the tabs*/
@@ -343,6 +284,9 @@ export default {
       theme: "silver",
       position: "top-left",
       size: "medium",
+      responsive: true,
+      mobileNav: true,
+      minWindowWidth: 991,  
       animation: {
       duration: 600,
       easing: "easeOutQuint",
@@ -351,11 +295,6 @@ export default {
       defaultTab: "tab1"
     });
 
-    /* Changing animation effects*/
-    $("#config input.effects").change(function () {
-      var effects = $('input[type=radio]:checked').attr("id");
-      tabbedNav.data("zozoTabs").setOptions({ "animation": { "effects": effects } });
-    });
 
     // <!-- Time Table -->
     $(function() {
@@ -410,42 +349,17 @@ export default {
     }	
 
     var accordion = new Accordion($('#accordion'), false);
-
-    // <!-- Back to Top -->
-    jQuery(document).ready(function($){
-    // browser window scroll (in pixels) after which the "back to top" link is shown
-    var offset = 300,
-    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-    offset_opacity = 1200,
-    //duration of the top scrolling animation (in ms)
-    scroll_top_duration = 1400,
-    //grab the "back to top" link
-    $back_to_top = $('.cd-top');
-
-    //hide or show the "back to top" link
-    $(window).scroll(function(){
-    ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-    if( $(this).scrollTop() > offset_opacity ) { 
-    $back_to_top.addClass('cd-fade-out');
-    }
-    });
-
-    //smooth scroll to top
-    $back_to_top.on('click', function(event){
-        event.preventDefault();
-        $('body,html').animate({
-        scrollTop: 0 ,
-        }, scroll_top_duration
-        );
-    });
-    });
-    // end back to top
-
   }
 }
 </script>
 
 <style>
+  /* tabs compleks seans */
+  @media (max-width: 1229px) {
+    .z-tabs.horizontal > ul > li{
+        margin: 0 40px 0 0;
+    }
+  }
   
 </style>
 
