@@ -46,6 +46,7 @@ export default {
     }
     .h3, h3 {
         font-size: 1.75rem;
+        text-transform: none;
     }
     .h4, h4 {
         font-size: 1.5rem;
@@ -56,9 +57,12 @@ export default {
     .h6, h6 {
         font-size: 1rem;
     }
-  h4{
-      line-height: 25px;
-  }
+    h4{
+        line-height: 25px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
   .custom-banner{
       background: url('~assets/custom-img/slides/tibet.jpg')
   }
@@ -77,6 +81,25 @@ export default {
     }
     .departments .depart-sec{
         padding: 50px 0;
+    }
+    .p-sub-title{
+        font-size: 24px;
+        color: #02adc6;
+        font-weight: bold;
+    }
+    .accent-list-done{
+        margin-bottom: 20px;
+    }
+    .accent-list-done li i {
+        font-size: 32px;
+        float: left;
+        margin: 10px 10px 0 0;
+        color: #02ADC6;
+    }
+    .accent-list-done li{
+        font-size: 20px;
+        color: #222;
+        line-height: 50px;
     }
     /* end inner page css */
 </style>
