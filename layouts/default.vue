@@ -63,6 +63,9 @@ export default {
     p{
         margin-bottom: 15px;
     }
+    .mb-0{
+        margin-bottom: 0;
+    }
   .custom-banner{
       background: url('~assets/custom-img/slides/tibet.jpg')
   }
@@ -100,6 +103,18 @@ export default {
         font-size: 20px;
         color: #222;
         line-height: 50px;
+    }
+    .gray-block{
+        background: #fafafa;
+        border: solid 1px #e4e4e4;
+        text-align: center;
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    .quote{
+        font-family: 'Droid Serif', serif;
+        color: #888;
+        font-style: italic;
     }
     /* end inner page css */
 </style>

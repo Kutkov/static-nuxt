@@ -55,8 +55,8 @@
           
                     <li class="parent"><a href="#.">Лечебные программы</a>
           <ul class="submenu">
-                        <li> <a href="about-us.html">About Us</a> </li>
-                        <li> <nuxt-link to="/about">Омоложение лица</nuxt-link></li>
+                        <li> <nuxt-link to="/seans-pohudet">Коррекция веса</nuxt-link></li>
+                        <li> <nuxt-link to="/omolozhenie">Омоложение лица</nuxt-link></li>
           </ul>
           </li>
           

@@ -8,7 +8,7 @@
 					<div class="col-md-12">
 						<div class="main-title">
 							<h1>Омоложение лица</h1>
-							<p>Восточная нейро-косметология</p>
+							<p class="p-sub-title">Восточная нейро-косметология</p>
 						</div>
 					</div>
 					</div>
