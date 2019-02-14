@@ -78,6 +78,13 @@ export default {
   .dr-quote{
       background: url('~assets/custom-img/parallax/tibet-sky.jpg') no-repeat fixed;
   }
+    .logo img{
+        width: 230px;
+    }
+    header.sticky .logo img{
+        width: 190px;
+        margin: 14px 0 0 0;
+    }
   /* inner page css */
     .header{
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32);
@@ -104,6 +111,12 @@ export default {
         color: #222;
         line-height: 50px;
     }
+    .accent-icon i{
+        font-size: 32px;
+        float: left;
+        margin: 10px 10px 0 0;
+        color: #02ADC6;
+    }
     .gray-block{
         background: #fafafa;
         border: solid 1px #e4e4e4;
@@ -115,6 +128,13 @@ export default {
         font-family: 'Droid Serif', serif;
         color: #888;
         font-style: italic;
+    }
+    .item img{
+        max-width: 470px;
+    }
+    .align-right{
+        float: right;
+        max-width: 400px;
     }
     /* end inner page css */
 </style>

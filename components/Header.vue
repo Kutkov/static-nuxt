@@ -37,7 +37,7 @@
         <div class="row">
           
             <div class="col-md-3">
-              <a href="index.html" class="logo"><img src="http://www.pearlthemes.com/theme/medicalguide/wp-content/uploads/2019/01/medicalguide-logo.png" alt=""></a>
+              <a href="index.html" class="logo"><img src="~assets/custom-img/inner-page/acupuncture/logo.png" alt=""></a>
             </div>
             
             <div class="col-md-9">
@@ -57,6 +57,7 @@
           <ul class="submenu">
                         <li> <nuxt-link to="/seans-pohudet">Коррекция веса</nuxt-link></li>
                         <li> <nuxt-link to="/omolozhenie">Омоложение лица</nuxt-link></li>
+                        <li> <nuxt-link to="/lechenie-tabakokureniya">Избавиться от курения табака</nuxt-link></li>
           </ul>
           </li>
           
