@@ -86,7 +86,7 @@ export default {
         margin: 14px 0 0 0;
     }
   /* inner page css */
-    .header{
+    .box-shadow{
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.32);
     }
     .departments .depart-sec{

@@ -31,7 +31,7 @@
     </div> 
     <!--Top Bar End-->
     <!--Start Header-->
-    <header class="header">
+    <header class="header box-shadow">
     <div class="container">
       
         <div class="row">
@@ -55,9 +55,10 @@
           
                     <li class="parent"><a href="#.">Лечебные программы</a>
           <ul class="submenu">
-                        <li> <nuxt-link to="/seans-pohudet">Коррекция веса</nuxt-link></li>
-                        <li> <nuxt-link to="/omolozhenie">Омоложение лица</nuxt-link></li>
-                        <li> <nuxt-link to="/lechenie-tabakokureniya">Избавиться от курения табака</nuxt-link></li>
+                        <li><nuxt-link to="/seans-pohudet">Коррекция веса</nuxt-link></li>
+                        <li><nuxt-link to="/omolozhenie">Омоложение лица</nuxt-link></li>
+                        <li><nuxt-link to="/lechenie-tabakokureniya">Курение табака</nuxt-link></li>
+                        <li><nuxt-link to="/lechenie-alkogolizma">Алкогольная зависимость</nuxt-link></li>
           </ul>
           </li>
           
