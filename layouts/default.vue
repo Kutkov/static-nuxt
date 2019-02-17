@@ -66,6 +66,9 @@ export default {
     .mb-0{
         margin-bottom: 0;
     }
+    .mb-1{
+        margin-bottom: 15px;
+    }
   .custom-banner{
       background: url('~assets/custom-img/slides/tibet.jpg')
   }
@@ -135,6 +138,12 @@ export default {
     .align-right{
         float: right;
         max-width: 400px;
+    }
+    .link{
+        color: #444444;
+    }
+    .link:hover{
+        color: #02ADC6;
     }
     /* end inner page css */
 </style>
